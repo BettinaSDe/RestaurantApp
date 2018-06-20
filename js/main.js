@@ -69,7 +69,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
 }
 
 /**
- * Initialize leaflet map, called from HTML.
+ * Initialize leaflet map, called from HTML. For MAPBOX 
  */
 /*  initMap = () => {
   self.newMap = L.map('map', {
@@ -89,6 +89,8 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
   updateRestaurants();
 }       */
 
+
+//For GOOGLE MAPS : 
 window.initMap = () => {
   let loc = {
     lat: 40.722216,
@@ -193,6 +195,7 @@ createRestaurantHTML = (restaurant) => {
 /**
  * Add markers for current restaurants to the map.
  */
+/* MAPBOX VERSION 
 addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
@@ -204,8 +207,11 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 
-} 
-/* addMarkersToMap = (restaurants = self.restaurants) => {
+}  */
+
+//GOOGLE MAPS 
+
+ addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
@@ -214,5 +220,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     });
     self.markers.push(marker);
   });
-} */
+} 
+
+
 
