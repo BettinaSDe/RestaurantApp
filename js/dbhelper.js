@@ -9,9 +9,9 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 5050 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
+    return `./data/restaurants.json`;
   }
-
+  
   /**
    * Fetch all restaurants.
    */
@@ -150,7 +150,7 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`https://bettinasde.github.io/RestaurantApp/img/${restaurant.photograph}`);
+    return (`/img/${restaurant.photograph}`);
   }
 
   /**
