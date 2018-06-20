@@ -4,13 +4,17 @@ var newMap;
 /**
  * Initialize map as soon as the page is loaded.
  */
+/* MAPBOX : 
+
 document.addEventListener('DOMContentLoaded', (event) => {  
   initMap();
-});
+});   */
 
 /**
  * Initialize leaflet map
  */
+
+ /*
 initMap = () => {
   fetchRestaurantFromURL((error, restaurant) => {
     if (error) { // Got an error!
@@ -33,9 +37,11 @@ initMap = () => {
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
   });
-}  
+}  */
  
-/* window.initMap = () => {
+//Google MAPS:
+
+window.initMap = () => {
   fetchRestaurantFromURL((error, restaurant) => {
     if (error) { // Got an error!
       console.error(error);
@@ -49,7 +55,9 @@ initMap = () => {
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
     }
   });
-} */
+} 
+
+
 
 /**
  * Get current restaurant from page URL.
