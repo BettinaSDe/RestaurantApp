@@ -11,7 +11,7 @@ class DBHelper {
     const port = 5050 // Change this to your server port
     return `./data/restaurants.json`;
   }
-  
+
   /**
    * Fetch all restaurants.
    */
@@ -150,25 +150,12 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`./img/${restaurant.photograph}`);
+    return (`/img/${restaurant.photograph}`);
   }
 
   /**
-   * Map marker for a restaurant MAPBOX 
+   * Map marker for a restaurant.
    */
-  /*
-   static mapMarkerForRestaurant(restaurant, map) {
-    // https://leafletjs.com/reference-1.3.0.html#marker  
-    const marker = new L.marker([restaurant.latlng.lat, restaurant.latlng.lng],
-      {title: restaurant.name,
-      alt: restaurant.name,
-      url: DBHelper.urlForRestaurant(restaurant)
-      })
-      marker.addTo(newMap);
-    return marker;
-   }  */
-
-//Map marker for a restaurant GOOGLE MAPS
   static mapMarkerForRestaurant(restaurant, map) {
     const marker = new google.maps.Marker({
       position: restaurant.latlng,
@@ -178,7 +165,6 @@ class DBHelper {
       animation: google.maps.Animation.DROP}
     );
     return marker;
-  } 
+  }
 
 }
-
