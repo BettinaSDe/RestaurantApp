@@ -182,22 +182,6 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 
 
 
-// from: https://www.kayak.com/affiliate/help/widget 
-KAYAK.embed({
-  container: document.getElementById("kayakSearchWidgetContainer"),
-  autoPosition: true,
-  defaultProduct: "flights",
-  enabledProducts: ["hotels", "flights"],
-  startDate: "2018-07-04",
-  endDate: "2018-07-10",
-  origin: "London Heathrow, LHR",
-  destination: "New York, NY",
-  ssl: true,
-  affiliateId: "acme_corp",
-  isInternalLoad: false,
-  lc: "en",
-  cc: "us",
-  mc: "EUR"
-  });
+
   
   
