@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang = en>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <link rel="stylesheet" href="css/styles.css">
-  <script type="text/JavaScript" src="https://www.kayak.com/affiliate/widget-v2.js"></script>
-  <title>Restaurant Reviews</title>
-</head>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+      <link rel="stylesheet" href="css/styles.css">
+      <title>Restaurant Reviews</title>
+    </head>
 
 
 
@@ -15,7 +16,7 @@
 <body>
   <header>
     <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+      <h1><a href="https://bettinasde.github.io/RestaurantApp/">Restaurant Reviews</a></h1>
     </nav>    
   </header>
 
@@ -23,17 +24,22 @@
 
   <main id="maincontent">
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" role="application" aria-label="map"></div>
     </section>
-    <section>
-      <div class="filter-options">
+    <section class="restaurants" id="restaurants" tabindex="-1">
+       <div class="filter-options">
         <h2>Filter Results</h2>
+        <label for="neighborhoods-select">
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
+      </label>
+      <label for="cuisines-select">
         <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-          <option value="all">All Cuisines</option>
+            <option value="all">All Cuisines</option>
         </select>
+      </label>
+
       </div>
       <ul id="restaurants-list"></ul>
     </section>
@@ -46,7 +52,7 @@
 
 
   <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    Copyright (c) 2018 <a href="https://bettinasde.github.io/RestaurantApp/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
 </body>
