@@ -171,7 +171,7 @@ class DBHelper {
 
 }
 
-navigator.serviceWorker.reister('/sw.js').then(function(reg){
+navigator.serviceWorker.register('/sw.js').then(function(reg){
   console.log('ServiceWorker registered');
   }).catch(function(err){
   console.log('Error');
