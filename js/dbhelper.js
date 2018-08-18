@@ -167,4 +167,11 @@ class DBHelper {
     return marker;
   }
 
+  navigator.serviceWorker.reister('/sw.js').then(function(reg){
+    console.log('ServiceWorker registered');
+    }).catch(function(err){
+    console.log('Error');
+    });
+
+
 }
