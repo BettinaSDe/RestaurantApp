@@ -1,6 +1,6 @@
 
 //Declare scope for ServiceWorker
-const currentCache = 'restaurantsCache-v1';
+const currentCache = 'restaurantsCache1';
 
 //initiate ServiceWorker and caching of current version
 self.addEventListener('install', event => {
