@@ -167,12 +167,13 @@ class DBHelper {
     return marker;
   }
 
-  
-
 }
 
-navigator.serviceWorker.register('/sw.js').then(function(reg){
-  console.log('ServiceWorker registered');
-  }).catch(function(err){
-  console.log('Error');
+
+
+  //register service worker
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register('./sw.js').then(reg => {
+      console.log('ServiceWorker registered');
   });
+}
