@@ -9,5 +9,7 @@ Specs: This **Restaurant Reviews** project is a training how to convert a static
 
 1. The local server I was running is: `http://localhost:5050` with python.
 
+This project is published under a MIT licence. 
+
 
 
